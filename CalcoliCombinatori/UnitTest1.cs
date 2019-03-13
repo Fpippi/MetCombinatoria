@@ -38,5 +38,13 @@ namespace CalcoliCombinatori
             int risultato2 = EquazioniLibrary.CalcoliCombinatori.fattoriale(n1);
             Assert.AreEqual(risultato, risultato2);
         }
+        [TestMethod]
+        public void TestMethod5()//Faccio il test del 10
+        {
+            int n1 = 10, risultato = 3628800;
+            //il massimo con in è 2 147 483 647 quindi se provo a fare il fattoriale di 13 mi va in overflow quindi non riesco a rappresentarlo
+            int risultato2 = EquazioniLibrary.CalcoliCombinatori.fattoriale(n1);
+            Assert.AreEqual(risultato, risultato2);
+        }
     }
 }
