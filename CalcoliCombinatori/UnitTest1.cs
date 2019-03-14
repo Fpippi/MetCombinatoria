@@ -14,19 +14,12 @@ namespace CalcoliCombinatori
             int risultato2 = EquazioniLibrary.CalcoliCombinatori.fattoriale(n1);
             Assert.AreEqual(risultato, risultato2);
         }
-        [TestMethod]
-        public void TestMethod2()//Faccio il test del 1
-        {
-            int n1 = 1, risultato = 1;
 
-            int risultato2 = EquazioniLibrary.CalcoliCombinatori.fattoriale(n1);
-            Assert.AreEqual(risultato, risultato2);
-        }
-        [TestMethod]
-        public void TestMethod3()//Faccio il test dello 0
+        [DataTestMethod]
+        [DataRow(0,1)]
+        [DataRow(1,1)]
+        public void TestMethod3(int n1,int risultato)//Faccio il test dello 0 //Faccio il test del 1
         {
-            int n1 = 0, risultato = 1;
-
             int risultato2 = EquazioniLibrary.CalcoliCombinatori.fattoriale(n1);
             Assert.AreEqual(risultato, risultato2);
         }
